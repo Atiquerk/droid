@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchbar"
+            android:background="#5718D2"
+            >
+<androidx.appcompat.widget.SearchView
+    android:layout_width="wrap_content"
+    android:id="@+id/searchview"
+    style="@style/SearchViewStyle"
+    android:layout_height="wrap_content"
+    android:background="#5718D2"
+
+    />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/threedots"
+                android:src="@drawable/menu"
+                android:layout_alignParentRight="true"
+                />
+
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#5718D2"
+            android:id="@+id/catmenu"
+
+            android:layout_below="@+id/searchbar"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal" >
+            <LinearLayout
+                android:layout_weight=".5"
+                android:layout_width="0dip"
+                android:background="#fff"
+
+                android:paddingLeft="10dp"
+
+                android:layout_height="58dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:src="@drawable/ringblue"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rightones"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:textColor="#5718D2"
+                android:layout_marginLeft="10dp"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight=".5"
+                android:layout_width="0dip"
+                android:paddingLeft="10dp"
+                android:id="@+id/catmenulink"
+                android:layout_height="50dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:src="@drawable/cat_menu"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Categories"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"
+
+                    android:textColor="#fff"
+                    android:layout_marginLeft="10dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/catmenu"
+            android:layout_width="match_parent"
+            android:id="@+id/recyclerviewLayout"
+            android:layout_height="wrap_content"
+            >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp"
+        />
+        </LinearLayout>
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            >
+
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#CC5718D2"
+        android:orientation="vertical"
+
+        >
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressTint="#F1002A"
+            android:progressBackgroundTint="#fff"
+            android:thumbTint="#F1002A"
+            android:id="@+id/seekbar"
+
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+
+               android:orientation="vertical"
+                >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ringtone Name "
+                android:textColor="#fff"
+                android:fontFamily="cursive"
+                android:textSize="25sp"
+                android:id="@+id/ringname"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+
+
+                >
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/cricleprevious"
+                    android:text="next"
+                    android:id="@+id/prev"
+                    />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/circleplay"
+                    android:id="@+id/play"
+                    android:layout_marginRight="5dp"
+
+                    />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/circlepause"
+                    android:visibility="gone"
+                    android:id="@+id/stop"
+                    android:layout_marginRight="5dp"
+                    />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/circlenext"
+                    android:text="next"
+                    android:id="@+id/next"
+                    />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+
+
+        />
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/recyclerviewLayout"
+        android:layout_centerHorizontal="true"
+
+        />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchbar"
+            android:background="#5718D2"
+            >
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="wrap_content"
+                android:id="@+id/searchview"
+                style="@style/SearchViewStyle"
+                android:layout_height="wrap_content"
+                android:background="#5718D2"
+
+                />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/threedots"
+                android:src="@drawable/menu"
+                android:layout_alignParentRight="true"
+                />
+
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#5718D2"
+            android:id="@+id/catmenu"
+
+            android:layout_below="@+id/searchbar"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal" >
+            <LinearLayout
+                android:layout_weight=".5"
+                android:layout_width="0dip"
+                android:id="@+id/catmenulink"
+                android:paddingLeft="10dp"
+
+                android:layout_height="58dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ring"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rightones"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"
+                    android:textColor="#fff"
+                    android:layout_marginLeft="10dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight=".5"
+                android:layout_width="0dip"
+                android:paddingLeft="10dp"
+                android:background="#fff"
+
+                android:layout_height="58dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:src="@drawable/menublue"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Categories"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"
+
+                    android:textColor="#5718D2"
+                    android:layout_marginLeft="10dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/catmenu"
+            android:layout_width="match_parent"
+            android:id="@+id/recyclerviewLayout"
+            android:layout_height="wrap_content"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/catsview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                />
+        </LinearLayout>
+
+
+
+
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/recyclerviewLayout"
+            android:layout_centerHorizontal="true"
+
+            />
+
+    </RelativeLayout>
+</RelativeLayout>
